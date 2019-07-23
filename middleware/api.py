@@ -19,7 +19,8 @@ def index():
         return markdown.markdown(content)
 
 
-
+# see
+# https://github.com/jakewright/tutorials/blob/master/home-automation/02-device-registry/device_registry/__init__.py
 class Collection(Resource):
     def get(self, identifier):
         coldb = db.CollectionsDb()

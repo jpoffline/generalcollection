@@ -1,9 +1,15 @@
 version: '3.4'
 
 services: 
-  generalcollection:
-    build: .
+  middleware:
+    build: ./middleware
     volumes: 
-      - .:/usr/src/app
+      - ./middleware:/usr/src/app
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=api.py
+      - FLASK_DEBUG=1
+    expose:
+      - 5000
     ports:
-      - 5000:80
+      - 5000:5000

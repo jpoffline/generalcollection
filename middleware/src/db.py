@@ -1,6 +1,7 @@
 import src.gencoll as gencoll
+#import src.db.idb as idb
 
-class CollectionsDb:
+class CollectionsDb():
     def __init__(self):
         self._collections = gencoll.GeneralCollections()
         self._insert_mock()
